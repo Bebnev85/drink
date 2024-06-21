@@ -1,0 +1,39 @@
+.map {
+  background-image: url("../../images/map-mobile@1x.png");
+  width: 100%;
+  height: 420px;
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  max-width: 1440px;
+
+  @include tablet-desktop {
+    background-image: url("../../images/map-tablet@1x.png");
+    height: 480px;
+  }
+
+  @include desktop {
+    background-image: url("../../images/map-desktop@1x.png");
+    height: 540px;
+  }
+}
+
+.map svg {
+  position: absolute;
+  display: block;
+  width: 38px;
+  height: 50px;
+  top: 185px;
+  left: 156px;
+
+  @include tablet-desktop {
+    top: 215px;
+    left: 380px;
+  }
+
+  @include desktop {
+    top: 245px;
+    left: 716px;
+  }
+}

@@ -1,0 +1,27 @@
+.header {
+  min-height: 60px;
+  box-sizing: border-box;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: start;
+
+  @include tablet-desktop {
+    width: 728px;
+    margin: 0 auto;
+    min-height: 80px;
+  }
+
+  @include desktop {
+    width: 1360px;
+  }
+}
+
+.header .logo {
+  margin-left: calc((100% - 280px) / 2);
+
+  @include tablet-desktop {
+    margin: 0;
+  }
+}

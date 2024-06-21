@@ -1,0 +1,82 @@
+.user-list {
+  display: flex;
+  gap: 0;
+  align-items: stretch;
+  justify-content: end;
+  flex-wrap: wrap;
+  max-width: 268px;
+
+  @include mobile {
+    flex-grow: 1;
+  }
+
+  @include desktop {
+    gap: 20px;
+    max-width: 403px;
+    width: 403px;
+  }
+}
+
+.user-list__link span {
+  @include mobile-tablet {
+    @include visually-hidden;
+  }
+}
+
+.user-list__link svg {
+  width: 16px;
+  height: 16px;
+}
+
+.user-list__link {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  line-height: 24px;
+  color: $base-black;
+  text-decoration: none;
+  text-transform: uppercase;
+  width: 60px;
+  height: 60px;
+
+  @include tablet-desktop {
+    height: 80px;
+  }
+
+  @include desktop {
+    gap: 10px;
+    width: auto;
+    padding: 0 20px;
+  }
+
+  @include hover-focus {
+    color: $base-primary;
+    outline: none;
+  }
+
+  @include active {
+    color: $base-primary;
+    background-color: $base-secondary;
+  }
+}
+
+.user-list__login-icon {
+  position: absolute;
+  top: 17px;
+  left: 21px;
+  width: 16px;
+  height: 16px;
+  opacity: 0.3;
+  fill: #ffffff;
+
+  @include tablet-desktop {
+    top: 29px;
+    left: 12px;
+  }
+
+  @include desktop {
+    left: 15px;
+  }
+}

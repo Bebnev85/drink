@@ -1,0 +1,165 @@
+.form {
+  display: flex;
+  flex-flow: column nowrap;
+  gap: 30px;
+  align-items: stretch;
+
+  @include tablet-desktop {
+    flex-flow: row wrap;
+    gap: 30px;
+    row-gap: 39px;
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-bottom: 19px;
+  }
+
+  @include desktop {
+    padding-top: 25px;
+    flex-direction: column;
+    width: 318px;
+    justify-content: start;
+    gap: 30px;
+  }
+}
+
+.form__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  margin-top: 1px;
+  margin-bottom: -1px;
+}
+
+.form__section {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+
+  @include tablet-desktop {
+    min-width: 222px;
+  }
+
+  &--range {
+    gap: 29px;
+  }
+}
+
+.form__button-block {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 20px;
+
+  @include tablet-desktop {
+    min-width: 100%;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  @include desktop {
+    margin-top: 10px;
+    justify-content: space-between;
+  }
+}
+
+.form__button {
+  border: none;
+  background-color: $base-primary;
+  color: $base-white;
+  border-radius: 3px;
+  cursor: pointer;
+  padding: 8px 20px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
+
+  @include desktop {
+    box-sizing: border-box;
+    width: 149px;
+  }
+
+  &:disabled {
+    background-color: $base-gray;
+  }
+
+  &[type="reset"] {
+    background-color: $base-white;
+    color: $base-primary;
+
+    &:disabled {
+      background-color: $light-gray;
+      color: $base-white;
+      cursor: default;
+    }
+  }
+
+  @include hover-focus {
+    color: $base-white;
+    background-color: $primary-lighter;
+  }
+
+  @include active {
+    color: $base-white;
+    background-color: $primary-darker;
+  }
+}
+
+.form__input-price {
+  width: 118px;
+  height: 40px;
+  padding: 8px 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 24px;
+  color: $base-black;
+  border: 2px solid $base-primary;
+  border-radius: 4px;
+  box-sizing: border-box;
+  text-align: center;
+
+  @include tablet-desktop {
+    width: 87px;
+  }
+
+  @include desktop {
+    width: 134px;
+  }
+
+  &::placeholder {
+    color: $base-gray;
+  }
+
+  @include focus {
+    border-color: $primary-darker;
+  }
+
+  &:disabled {
+    background-color: $bg-gray;
+    border-color: $light-gray;
+    color: $base-gray;
+  }
+}
+
+.form__price {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin-top: 5px;
+
+  @include tablet-desktop {
+    margin-top: 1px;
+  }
+
+  @include desktop {
+    margin-top: 3px;
+  }
+}
+
+.form__tire {
+  display: block;
+  background-color: $base-gray;
+  min-width: 8px;
+  height: 2px;
+}

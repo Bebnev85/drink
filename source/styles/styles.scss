@@ -1,0 +1,35 @@
+/* GLOBAL */
+@import "./common/variables.scss";
+@import "./common/mixins.scss";
+@import "./common/global.scss";
+@import "./common/fonts.scss";
+
+// Vendor styles
+
+@import "../vendor/no-ui-slider/nouislider.min.css";
+
+/* UI */
+@import "./elements/container.scss";
+@import "./elements/title.scss";
+@import "./elements/preview.scss";
+@import "./elements/wrapper.scss";
+@import "./elements/input.scss";
+@import "./elements/range-slider.scss";
+@import "./elements/select.scss";
+
+/* BLOCKS */
+@import "./blocks/header.scss";
+@import "./blocks/logo.scss";
+@import "./blocks/main-nav.scss";
+@import "./blocks/user-list.scss";
+@import "./blocks/site-list.scss";
+@import "./blocks/hero.scss";
+@import "./blocks/slide.scss";
+@import "./blocks/features.scss";
+@import "./blocks/catalog.scss";
+@import "./blocks/form.scss";
+@import "./blocks/card.scss";
+@import "./blocks/pagination.scss";
+@import "./blocks/map.scss";
+@import "./blocks/sort.scss";
+@import "./blocks/footer.scss";

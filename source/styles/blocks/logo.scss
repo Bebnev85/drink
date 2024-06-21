@@ -1,0 +1,21 @@
+.logo {
+  display: flex;
+  height: 60px;
+  align-items: center;
+
+  @include tablet-desktop {
+    height: 80px;
+  }
+}
+
+.logo img {
+  width: 32px;
+
+  @include tablet-desktop {
+    width: 82px;
+  }
+
+  @include desktop {
+    width: 170px;
+  }
+}

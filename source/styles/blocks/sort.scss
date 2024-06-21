@@ -1,0 +1,41 @@
+.sort {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  padding-top: 21px;
+  padding-left: 3px;
+  box-sizing: border-box;
+
+  @include tablet-desktop {
+    padding-top: 1px;
+    justify-content: end;
+    min-width: 100%;
+  }
+
+  @include desktop {
+    padding-top: 20px;
+    padding-right: 1px;
+    gap: 11px;
+  }
+}
+
+.sort__select {
+  flex-grow: 1;
+
+  @include tablet-desktop {
+    flex-grow: 0;
+    min-width: 125px;
+    margin-right: 5px;
+    margin-top: 1px;
+  }
+
+  @include desktop {
+    margin-right: 3px;
+  }
+}
+
+.sort__title {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+}

@@ -1,0 +1,17 @@
+.slide {
+  display: none;
+
+  &--active {
+    display: block;
+
+    @include tablet-desktop {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @include desktop {
+      flex-direction: row;
+    }
+  }
+}

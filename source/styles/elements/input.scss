@@ -1,0 +1,114 @@
+.input {
+  display: flex;
+  gap: 10px;
+  align-items: start;
+  cursor: pointer;
+}
+
+.input input {
+  @include visually-hidden;
+}
+
+.input span {
+  line-height: 24px;
+}
+
+.input span:nth-child(2) {
+  height: 24px;
+  box-sizing: border-box;
+  border: 2px solid $base-primary;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.input--radio span:nth-child(2) {
+  width: 24px;
+  border-radius: 50%;
+  border-color: $base-gray;
+}
+
+.input--radio input:checked + span:nth-child(2) {
+  border-color: $base-primary;
+}
+
+.input--radio input:checked + span:nth-child(2)::before {
+  display: block;
+  content: "";
+  background-color: $base-primary;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+}
+
+.input--radio input:disabled + span:nth-child(2) {
+  border-color: $light-gray;
+
+  &::before {
+    background-color: $light-gray;
+    width: 14px;
+    height: 14px;
+  }
+}
+
+.input--radio input:not(:disabled) {
+  @include hover-focus {
+    & + span:nth-child(2)::before {
+      display: block;
+      content: "";
+      width: 16px;
+      height: 16px;
+      border-radius: 50%;
+      background-color: $primary-25;
+    }
+  }
+}
+
+.input--checkbox span:nth-child(2) {
+  width: 42px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: start;
+  border-color: $base-gray;
+  background-color: $base-gray;
+}
+
+.input--checkbox input:checked + span:nth-child(2) {
+  border-color: $base-primary;
+  background-color: $base-primary;
+  justify-content: end;
+}
+
+.input--checkbox span:nth-child(2)::before {
+  display: block;
+  content: "";
+  background-color: $base-white;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+}
+
+.input--checkbox input:disabled + span:nth-child(2) {
+  border-color: $light-gray;
+  background-color: $light-gray;
+
+  &::before {
+    background-color: $bg-gray;
+  }
+}
+
+.input--checkbox input:not(:disabled) {
+  @include hover-focus {
+    & + span:nth-child(2) {
+      background-color: $primary-25;
+    }
+  }
+}
+
+.input input:disabled + span + .input__text {
+  color: $base-gray;
+}
+
+// // .input:not(.input input:disabled) .input__text {
+// //   color: red;
+// }
